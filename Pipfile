@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "*"
+yfinance = "*"
+debugpy = "*"
+plost = "*"
+streamlit-elements = "*"
+ta = "*"
+pandas-ta = "*"
+streamlit-echarts = "*"
+streamlit-pills = "*"
+numpy = "*"
+cython = "*"
+setuptools = "*"
+pyinstaller = "*"
+cx-freeze = "*"
+streamlit-aggrid = "*"
+streamlit-toggle-switch = "*"
+streamlit-option-menu = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
