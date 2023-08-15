@@ -10,7 +10,6 @@ from Core.fetch_ticker_data import (
     fetch_yahoo_fin_balance_sheet,
 )
 from Tabs.CompanyDetails.details_tab import ticker_details_tab
-from Tabs.CandlestickPatterns.tab_candlestick_patterns import tab_candlestick_pattern
 from Tabs.TechnicalAnalysis.tab_technical_analysis import tab_technical_analysis
 from Tabs.News.tab_news import tab_news
 from Tabs.Financials.tab_financials import tab_financials
@@ -56,9 +55,6 @@ if tab_menu_selected == "News":
 
 if tab_menu_selected == "Technical Analysis":
     tab_technical_analysis(st)
-
-if tab_menu_selected == "CandleStick Patterns":
-    tab_candlestick_pattern(st)
 
 if tab_menu_selected == "Options":
     tab_options(st)

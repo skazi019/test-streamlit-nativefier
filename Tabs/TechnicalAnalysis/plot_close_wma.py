@@ -1,7 +1,7 @@
 import pandas as pd
 from state import State
 from streamlit_echarts import st_echarts
-from talib import WMA
+import pandas_ta as ta
 
 from config import (
     candlestick_down_color,
@@ -17,7 +17,7 @@ def plot_close_wma(st):
     ticker_data.rename(columns={"Date": "Datetime"}, inplace=True)
     emas = [9, 21, 50, 90, 200]
     for ma in emas:
-        ticker_data[f"WMA_{ma}"] = WMA(ticker_data["Close"], timeperiod=ma).round(2)
+        ticker_data[f"WMA_{ma}"] = ta.wma(ticker_data["Close"], length=ma).round(2)
     ticker_data["Datetime"] = ticker_data["Datetime"].astype(str)
 
     options_yaxis_series = []
